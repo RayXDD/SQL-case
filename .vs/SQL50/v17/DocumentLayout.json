@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "C:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\MS SQL\\SQL50\\",
   "Documents": [
     {
+<<<<<<< HEAD
+=======
+      "AbsoluteMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|c:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\ms sql\\sql50\\sql50\\dev11401.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|solutionrelative:sql50\\dev11401.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> Branch_DEV11401
       "AbsoluteMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|c:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\ms sql\\sql50\\sql50\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|solutionrelative:sql50\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,12 +42,29 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DEV11401.cs",
+              "DocumentMoniker": "C:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\MS SQL\\SQL50\\SQL50\\DEV11401.cs",
+              "RelativeDocumentMoniker": "SQL50\\DEV11401.cs",
+              "ToolTip": "C:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\MS SQL\\SQL50\\SQL50\\DEV11401.cs",
+              "RelativeToolTip": "SQL50\\DEV11401.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T06:12:59.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\MS SQL\\SQL50\\SQL50\\Program.cs",
               "RelativeDocumentMoniker": "SQL50\\Program.cs",
               "ToolTip": "C:\\\u500B\u4EBA\u8CC7\u6599\u593E\\\u95DC\u65BC\u6211\\\u7A0B\u5F0F\u5B78\u7FD2\\MS SQL\\SQL50\\SQL50\\Program.cs",
               "RelativeToolTip": "SQL50\\Program.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAEgCAAAAAAAAAAAAAFQCAABiAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAEgCAAAAAAAAAAAAAEAAAAAUAAAAAAAAAA==",
+>>>>>>> Branch_DEV11401
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T16:10:29.469Z",
               "EditorCaption": ""

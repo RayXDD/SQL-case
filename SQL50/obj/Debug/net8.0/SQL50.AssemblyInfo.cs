@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SQL50")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3510f713654cbd52c1dfba496527c83cb698d9f2")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72a86ea0ff6b98fc3362d7b3e9b9a6abeb374cd9")]
+>>>>>>> Branch_DEV11401
 [assembly: System.Reflection.AssemblyProductAttribute("SQL50")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SQL50")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
