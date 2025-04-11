@@ -2,6 +2,8 @@
 
 /*SELECT*/
 /*1.Recyclable and Low Fat Products*/
+using System.ComponentModel;
+
 SELECT product_id FROM Products WHERE low_fats ='Y' AND recyclable ='Y'
 /* 2.Find Customer Referee */
 SELECT [name] FROM Customer WHERE referee_id != 2 OR referee_id IS NULL
@@ -490,13 +492,13 @@ SELECT TOP(1) person_name FROM Second
 WHERE total <= 1000
 ORDER BY turn DESC
 /* 7.Count Salary Categories */
-SELECT 'Low Salary' as category,COUNT(account_id) as accounts_count FROM Accounts
+SELECT 'Low Salary' as category, COUNT(account_id) as accounts_count FROM Accounts
 WHERE income < 20000
 UNION
-SELECT 'Average Salary' as category,COUNT(account_id) as accounts_count FROM Accounts
+SELECT 'Average Salary' as category, COUNT(account_id) as accounts_count FROM Accounts
 WHERE income BETWEEN 20000 AND 50000
 UNION
-SELECT 'High Salary' as category,COUNT(account_id) as accounts_count FROM Accounts
+SELECT 'High Salary' as category, COUNT(account_id) as accounts_count FROM Accounts
 WHERE income > 50000
 
 
@@ -507,20 +509,20 @@ WHERE salary < 30000 AND manager_id NOT IN (SELECT employee_id FROM Employees)
 ORDER BY employee_id 
 /* 2.Exchange Seats --數據平移，LEAD()和LAG() */
 SELECT (CASE WHEN ID%2=0 THEN ID-1
-             WHEN ID%2=1 THEN LEAD(ID,1,ID) OVER (ORDER BY ID ASC) END) as id,student FROM Seat
+             WHEN ID%2=1 THEN LEAD(ID,1, ID) OVER (ORDER BY ID ASC) END) as id, student FROM Seat
 ORDER BY id ASC
 /* 3.Movie Rating */
 WITH results1 AS(
     SELECT TOP(1) C.name as results FROM MovieRating A
 LEFT JOIN Users C ON A.user_id = C.user_id
 GROUP BY C.name
-ORDER BY COUNT(A.rating) DESC,C.name ASC
-),results2 AS(
+ORDER BY COUNT(A.rating) DESC, C.name ASC
+), results2 AS(
     SELECT TOP(1) B.title as results FROM MovieRating A
 LEFT JOIN Movies B ON A.movie_id = B.movie_id
 WHERE A.created_at like '2020-02%'
 GROUP BY B.title
-ORDER BY AVG(A.rating + 0.00) DESC,B.title ASC
+ORDER BY AVG(A.rating + 0.00) DESC, B.title ASC
 )
 
 SELECT results FROM results1
@@ -529,7 +531,7 @@ SELECT results FROM results2
 /* 4.Restaurant Growth --Rows Between來加總特定區間的值*/
 SELECT visited_on,
     SUM(SUM(amount)) OVER (ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) as amount,
-    ROUND(CAST(SUM(SUM(amount)) OVER (ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) as float)/7.0,2) as average_amount
+    ROUND(CAST(SUM(SUM(amount)) OVER(ORDER BY visited_on ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) as float) / 7.0, 2) as average_amount
     FROM Customer
 GROUP BY visited_on
 ORDER BY visited_on
@@ -540,15 +542,15 @@ WITH Answer AS (
     UNION ALL
     SELECT accepter_id as id FROM RequestAccepted
 )
-SELECT TOP(1) id,COUNT(id) as num FROM Answer
+SELECT TOP(1) id, COUNT(id) as num FROM Answer
 GROUP BY id
 ORDER BY COUNT(id) DESC
 /* 6.Investments in 2016 --窗口函數會計算與它相同的行數。*/
 WITH Answer AS(
     SELECT
 	*,
-	COUNT(lat) OVER(PARTITION BY lat,lon) CountLatLon,
-	COUNT(tiv_2015) OVER(PARTITION BY tiv_2015) CountT_2015
+    COUNT(lat) OVER(PARTITION BY lat, lon) CountLatLon,
+    COUNT(tiv_2015) OVER(PARTITION BY tiv_2015) CountT_2015
 	FROM　Insurance 
 )
 SELECT ROUND(SUM(tiv_2016),2) as tiv_2016 FROM Answer
@@ -556,18 +558,18 @@ WHERE CountLatLon = 1 AND CountT_2015 >1
 
 /* 7.Department Top Three Salaries --DENSE_RANK()資料排序w */
 WITH Answer as(
-SELECT B.name as Department,A.name as Employee,A.salary as Salary,
+SELECT B.name as Department, A.name as Employee, A.salary as Salary,
 DENSE_RANK() OVER (PARTITION BY B.name ORDER BY A.salary DESC) as rank FROM Employee A
 LEFT JOIN Department B ON A.departmentId = B.id
 )
 
-SELECT Department,Employee,Salary FROM Answer
+SELECT Department, Employee, Salary FROM Answer
 WHERE rank <= 3
-ORDER BY Department ASC,Salary DESC
+ORDER BY Department ASC, Salary DESC
 
 /* Advanced String Functions / Regex / Clause*/
 /* 1.Fix Names in a Table --透過UPPER調整字串*/
-SELECT user_id,UPPER(LEFT(name,1))+LOWER(RIGHT(name,LEN(name)-1))as name FROM Users
+SELECT user_id, UPPER(LEFT(name, 1))+LOWER(RIGHT(name, LEN(name)-1))as name FROM Users
 ORDER BY user_id ASC
 /* 2.Patients With a Condition*/
 SELECT * FROM Patients
@@ -582,17 +584,17 @@ DELETE temp WHERE GroupID > 1
 SELECT MAX(salary) as SecondHighestSalary FROM Employee
 WHERE salary != (SELECT MAX(salary) FROM Employee) 
 /* 5. Group Sold Products By The Date--透過子查詢重新定義TABLE*/
-SELECT sell_date,COUNT(sell_date) as num_sold,
-STRING_AGG(product,',') AS products FROM (SELECT DISTINCT*FROM Activities) t
+SELECT sell_date, COUNT(sell_date) as num_sold,
+STRING_AGG(product, ',') AS products FROM (SELECT DISTINCT*FROM Activities) t
 GROUP BY sell_date
 /* 6.List the Products Ordered in a Period */
-SELECT A.product_name,SUM(B.unit) as unit FROM Products A
+SELECT A.product_name, SUM(B.unit) as unit FROM Products A
 LEFT JOIN Orders B ON B.product_id = A.product_id AND B.order_date BETWEEN '2020-02-01' AND '2020-02-29'
-GROUP BY A.product_id,A.product_name
+GROUP BY A.product_id, A.product_name
 HAVING SUM(B.unit) >= 100
 /* 7.Find Users With Valid E-Mails--透過雙重否定與LIKE*/
 SELECT user_id, name, mail FROM Users
-WHERE mail LIKE '[a-zA-Z]%@leetcode.com' AND LEFT(mail,LEN(mail)-13) NOT LIKE '%[^a-zA-Z0-9_.-]%'
+WHERE mail LIKE '[a-zA-Z]%@leetcode.com' AND LEFT(mail, LEN(mail)-13) NOT LIKE '%[^a-zA-Z0-9_.-]%'
 
-//我是master
+string branch = "Master";
 
