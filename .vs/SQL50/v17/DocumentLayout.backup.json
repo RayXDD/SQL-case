@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shuyu\\OneDrive\\\u684C\u9762\\\u5609\u5229-\u5408\u5EAB\u958B\u767C\u8CC7\u6599\\SQL\\SQL50\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|c:\\users\\shuyu\\onedrive\\\u684C\u9762\\\u5609\u5229-\u5408\u5EAB\u958B\u767C\u8CC7\u6599\\sql\\sql50\\sql50\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CF2AD05-817C-4DC3-9F9E-8A13BE48E03B}|SQL50\\SQL50.csproj|solutionrelative:sql50\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 30,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shuyu\\OneDrive\\\u684C\u9762\\\u5609\u5229-\u5408\u5EAB\u958B\u767C\u8CC7\u6599\\SQL\\SQL50\\SQL50\\Program.cs",
+              "RelativeDocumentMoniker": "SQL50\\Program.cs",
+              "ToolTip": "C:\\Users\\Shuyu\\OneDrive\\\u684C\u9762\\\u5609\u5229-\u5408\u5EAB\u958B\u767C\u8CC7\u6599\\SQL\\SQL50\\SQL50\\Program.cs",
+              "RelativeToolTip": "SQL50\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T16:10:29.469Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
