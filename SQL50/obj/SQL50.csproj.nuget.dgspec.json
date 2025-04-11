@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Shuyu\\OneDrive\\桌面\\嘉利-合庫開發資料\\SQL\\SQL50\\SQL50\\SQL50.csproj": {}
+    "C:\\個人資料夾\\關於我\\程式學習\\MS SQL\\SQL50\\SQL50\\SQL50.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Shuyu\\OneDrive\\桌面\\嘉利-合庫開發資料\\SQL\\SQL50\\SQL50\\SQL50.csproj": {
+    "C:\\個人資料夾\\關於我\\程式學習\\MS SQL\\SQL50\\SQL50\\SQL50.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Shuyu\\OneDrive\\桌面\\嘉利-合庫開發資料\\SQL\\SQL50\\SQL50\\SQL50.csproj",
+        "projectUniqueName": "C:\\個人資料夾\\關於我\\程式學習\\MS SQL\\SQL50\\SQL50\\SQL50.csproj",
         "projectName": "SQL50",
-        "projectPath": "C:\\Users\\Shuyu\\OneDrive\\桌面\\嘉利-合庫開發資料\\SQL\\SQL50\\SQL50\\SQL50.csproj",
-        "packagesPath": "C:\\Users\\Shuyu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shuyu\\OneDrive\\桌面\\嘉利-合庫開發資料\\SQL\\SQL50\\SQL50\\obj\\",
+        "projectPath": "C:\\個人資料夾\\關於我\\程式學習\\MS SQL\\SQL50\\SQL50\\SQL50.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\個人資料夾\\關於我\\程式學習\\MS SQL\\SQL50\\SQL50\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Shuyu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -60,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
